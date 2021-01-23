@@ -1,0 +1,236 @@
+:root {
+    /* base-16 solarized */
+    --base00: #002b36;
+    --base01: #073642;
+    --base02: #586e75;
+    --base03: #657b83;
+    --base04: #839496;
+    --base05: #93a1a1;
+    --base06: #eee8d5;
+    --base07: #fdf6e3;
+    --base08: #dc322f;
+    --base09: #cb4b16;
+    --base0A: #b58900;
+    --base0B: #859900;
+    --base0C: #2aa198;
+    --base0D: #268bd2;
+    --base0E: #6c71c4;
+    --base0F: #d33682;
+
+    --red:      var(--base08);
+    --orange:   var(--base09);
+    --yellow:   var(--base0A);
+    --green:    var(--base0B);
+    --cyan:     var(--base0C);
+    --blue:     var(--base0D);
+    --violet:   var(--base0E);
+    --magenta:  var(--base0F);
+}
+
+.theme-dark {
+    --bg-default:   var(--base00);
+    --bg-highlight: var(--base01);
+    --fg-weak:      var(--base03);
+    --fg-mild:      var(--base04);
+    --fg-default:   var(--base05);
+    --fg-bold:      var(--base06);
+    --fg-strong:    var(--base07);
+
+    /* search fg must be dark against yellow */
+    --text-search: var(--base00);
+}
+
+.theme-light {
+    --bg-default:   var(--base07);
+    --bg-highlight: var(--base06);
+    --fg-weak:      var(--base04);
+    --fg-mild:      var(--base03);
+    --fg-default:   var(--base02);
+    --fg-bold:      var(--base01);
+    --fg-strong:    var(--base00);
+
+    /* search fg must be dark against yellow */
+    --text-search: var(--base00);
+}
+
+.theme-dark,
+.theme-light {
+
+
+
+    --background-primary: var(--bg-default);
+    --background-primary-alt: var(--bg-highlight);
+    --background-secondary: var(--bg-default);
+    --background-secondary-alt: var(--bg-highlight);
+    --background-modifier-border: var(--fg-weak);
+    --background-modifier-success: var(--green);
+    --background-modifier-error: var(--red);
+    --background-modifier-error-hover: var(--red);
+    --text-accent: var(--blue);
+    --text-accent-hover: var(--blue);
+    --text-normal: var(--fg-default);
+    --text-muted: var(--fg-mild);
+    --text-faint: var(--fg-weak);
+    --text-error: var(--red);
+    --text-error-hover: var(--red);
+    --text-highlight-bg: var(--bg-highlight);
+    --text-selection: var(--blue);
+    --text-on-accent: var(--fg-strong);
+    --interactive-normal: var(--bg-default);
+    --interactive-hover: var(--bg-highlight);
+    --interactive-accent: var(--orange);
+    --interactive-accent-hover: var(--magenta);
+    --interactive-success: var(--green);
+
+    --text-formatting: var(--fg-weak);
+
+    --text-title: var(--red);
+    --text-title-formatting: var(--yellow);
+
+    --text-code-inline: var(--cyan);
+    --text-code-inline-formatting: var(--text-formatting);
+    --text-code-block: var(--red);
+    --text-code-block-formatting: var(--text-formatting);
+
+    --text-math: var(--text-code-inline);
+    --text-math-formatting: var(--text-formatting);
+
+    --cursor: var(--fg-weak);
+    --vim-insert-cursor: var(--cursor);
+    --vim-normal-cursor: var(--cursor);
+    --vim-visual-cursor: var(--cursor);
+
+    --text-tag: var(--bg-default);
+    --background-tag: var(--fg-weak);
+
+    --text-quote: var(--violet);
+    --text-quote-formatting: var(--text-formatting);
+
+    --text-hr: var(--blue);
+
+    --text-list-formatting: var(--text-formatting);
+
+    --background-search: var(--yellow);
+
+    --text-highlight-fg: var(--orange);
+
+    --text-border: var(--yellow);
+}
+
+.cm-header {
+    color: var(--text-title);
+}
+.cm-header.cm-formatting-header {
+    color: var(--text-title-formatting);
+}
+
+.cm-formatting {
+    color: var(--text-formatting);
+}
+
+.cm-s-obsidian span.cm-formatting-list {
+    color: var(--text-list-formatting);
+}
+
+h1, h2, h3, h4, h5, h6, .markdown-preview-view h6{
+    color: var(--text-title);
+}
+
+.cm-formatting-image.cm-link {
+    color: var(--text-faint) !important;
+}
+
+.CodeMirror span.cm-inline-code,
+pre > code:not(.prism) {
+    color: var(--text-code-inline);
+}
+.cm-formatting-code {
+    color: var(--text-code-inline-formatting) !important;
+    background-color: var(--background-primary) !important;
+}
+
+.cm-hmd-codeblock,
+.CodeMirror span.cm-inline-code.cm-hmd-indented-code {
+    color: var(--text-code-block);
+}
+.cm-formatting-code-block {
+    color: var(--text-code-block-formatting) !important;
+}
+
+.CodeMirror span.cm-math {
+    color: var(--text-math);
+}
+.CodeMirror span.cm-formatting-math {
+    color: var(--text-math-formatting);
+}
+
+pre.HyperMD-codeblock {
+    color: var(--text-normal) !important;
+}
+
+.cm-highlight, mark {
+    background: var(--text-highlight-bg) !important;
+    color: var(--text-highlight-fg) !important;
+}
+
+blockquote, .markdown-embed {
+    border-color: var(--text-border) !important;
+}
+
+.search-result-file-matched-text {
+    color: var(--text-highlight-fg);
+}
+
+.suggestion-item.is-selected {
+    background-color: var(--background-highlight);
+}
+
+/* Tags */
+.cm-s-obsidian span.cm-hashtag-begin,
+.cm-s-obsidian span.cm-hashtag-end,
+a.tag {
+    background-color: var(--background-tag);
+    color: var(--text-tag);
+    padding: 5px;
+    text-decoration: none;
+}
+
+a.tag {
+    border-radius: 10px;
+}
+
+.cm-s-obsidian span.cm-hashtag-begin {
+    border-radius: 10px 0px 0px 10px;
+    font-family: inherit;
+    padding-right: 0px;
+}
+
+.cm-s-obsidian span.cm-hashtag-end {
+    border-radius: 0px 10px 10px 0px;
+    padding-left: 0px;
+}
+
+.cm-fat-cursor .CodeMirror-cursor {
+    background-color: var(--vim-normal-cursor);
+}
+.CodeMirror-cursor {
+    border-left-color: var(--vim-insert-cursor);
+}
+.cm-animate-fat-cursor {
+    background-color: var(--vim-visual-cursor);
+}
+
+.cm-s-obsidian span.cm-hr {
+    color: var(--text-hr);
+}
+
+.cm-searching {
+    color: var(--text-search);
+    background-color: var(--background-search);
+}
+.cm-s-obsidian span.cm-quote {
+    color: var(--text-quote);
+}
+.cm-s-obsidian span.cm-quote.cm-formatting-quote {
+    color: var(--text-quote-formatting);
+}
